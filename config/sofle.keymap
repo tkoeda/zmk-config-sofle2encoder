@@ -76,7 +76,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LG(LA(RIGHT)) LG(LA(LEFT)) 2>,
+                <&inc_dec_kp LG(LA(RIGHT)) LG(LA(LEFT))>,
                 <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
         };
 
