@@ -12,11 +12,11 @@
     };
 };
 
-/* Now bind your sensors to the encoder instances */
-&encoder_left {
+/* Bind your new sensor configs to the real encoder nodes */
+&left_encoder {
     sensor = <&left_config>;
 };
 
-&encoder_right {
+&right_encoder {
     sensor = <&right_config>;
 };
