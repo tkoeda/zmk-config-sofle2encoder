@@ -6,12 +6,12 @@
 };
 
 /* Also enable each encoder and (optionally) override its own steps */
-&left_encoder {
+&encoder_left {
     status = "okay";
        steps = <30>;  
 };
 
-&right_encoder {
+&encoder_right {
     status = "okay";
     steps = <30>;
 };
