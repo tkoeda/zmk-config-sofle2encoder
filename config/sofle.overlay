@@ -10,12 +10,13 @@
             triggers-per-rotation = <30>;
         };
     };
+};
 
-    &encoder_left {
-        sensor = <&left_config>;
-    };
+/* Now bind your sensors to the encoder instances */
+&encoder_left {
+    sensor = <&left_config>;
+};
 
-    &encoder_right {
-        sensor = <&right_config>;
-    };
+&encoder_right {
+    sensor = <&right_config>;
 };
