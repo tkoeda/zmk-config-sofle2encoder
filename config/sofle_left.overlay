@@ -1,15 +1,20 @@
-/*
- * Copyright (c) 202X The ZMK Contributors // Optional: Update year/name
- * SPDX-License-Identifier: MIT
- */
+/* config/sofle_left.overlay */
+/ { // Ensures we are defining this at the root level of the DTS
 
-// It's good practice to include this, though not strictly needed for this simple change.
-// #include <dt-bindings/zmk/matrix_transform.h>
+    left_encoder: left_encoder { // Defines a node with the label "left_encoder"
+        compatible = "alps,ec11";
+        label = "LEFT_ENCODER";   /* This is the label for ZMK's sensor subsystem */
 
-&left_encoder {
-    /* You can optionally ensure the status is "okay" here,
-     * though the base ZMK sofle_left.overlay already does this.
-     * status = "okay";
-     */
-    triggers-per-rotation = <30>;
+        /* IMPORTANT: You MUST verify these GPIO pin assignments for your specific Sofle PCB version! */
+        /* The pins below (Pro Micro D2 and D3) are common for some Sofle versions but can vary. */
+        /* Consult your PCB's documentation or schematic. */
+        a-gpios = <&pro_micro 2 (GPIO_PULL_UP | GPIO_ACTIVE_HIGH)>; /* Example: Pro Micro D2 pin */
+        b-gpios = <&pro_micro 3 (GPIO_PULL_UP | GPIO_ACTIVE_HIGH)>; /* Example: Pro Micro D3 pin */
+
+        // resolution = <2>; /* Optional: ZMK defaults to 2 (pulses per detent).
+                            //  Set to 1 or 4 if your encoder is different.
+                            //  This is NOT the same as triggers-per-rotation. */
+        status = "okay";
+        triggers-per-rotation = <30>;
+    };
 };
