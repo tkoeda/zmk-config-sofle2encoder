@@ -1,0 +1,8 @@
+&left_encoder  { status = "okay"; };
+&right_encoder { status = "okay"; };
+
+/ {
+    sensors: sensors {
+        triggers-per-rotation = <30>;
+    };
+};
