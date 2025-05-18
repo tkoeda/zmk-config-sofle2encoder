@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 202X The ZMK Contributors // Optional: Update year/name
+ * SPDX-License-Identifier: MIT
+ */
+
+// #include <dt-bindings/zmk/matrix_transform.h>
+
 &right_encoder {
     /* status = "okay"; */
     triggers-per-rotation = <30>;
