@@ -1,0 +1,23 @@
+/ {
+    sensors {
+        left_config: left_config {
+            compatible = "zmk,rotary-encoder";
+            triggers-per-rotation = <30>;
+        };
+
+        right_config: right_config {
+            compatible = "zmk,rotary-encoder";
+            triggers-per-rotation = <30>;
+        };
+    };
+};
+
+/ {
+    &encoder_left {
+        sensor = <&left_config>;
+    };
+
+    &encoder_right {
+        sensor = <&right_config>;
+    };
+};
