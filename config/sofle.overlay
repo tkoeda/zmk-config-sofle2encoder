@@ -1,9 +1,0 @@
-/ {
-    /* Find the existing sensors node by its label and override just this property: */
-    sensors: sensors {
-        triggers-per-rotation = <30>;
-    };
-};
-
-&left_encoder  { status = "okay"; };
-&right_encoder { status = "okay"; };
