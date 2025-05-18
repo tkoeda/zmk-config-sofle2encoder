@@ -1,5 +1,5 @@
 /* sofle_left.overlay */
-&sensors { // Or the actual sensor controller node name for your board
+&left_encoder { // Or the actual sensor controller node name for your board
     left_config { // Or the actual node name for the LEFT encoder
         triggers-per-rotation = <30>;
     };
