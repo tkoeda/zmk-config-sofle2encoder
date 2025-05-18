@@ -8,12 +8,10 @@
 /* Also enable each encoder and (optionally) override its own steps */
 &left_encoder {
     status = "okay";
-    /* If you prefer per-encoder steps instead of global triggers-per-rotation:
        steps = <30>;  
-    */
 };
 
 &right_encoder {
     status = "okay";
-    /* steps = <30>; */
+    steps = <30>;
 };
