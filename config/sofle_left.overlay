@@ -1,6 +1,15 @@
-/* sofle_left.overlay */
-&left_encoder { // Or the actual sensor controller node name for your board
-    left_config { // Or the actual node name for the LEFT encoder
-        triggers-per-rotation = <30>;
-    };
+/*
+ * Copyright (c) 202X The ZMK Contributors // Optional: Update year/name
+ * SPDX-License-Identifier: MIT
+ */
+
+// It's good practice to include this, though not strictly needed for this simple change.
+// #include <dt-bindings/zmk/matrix_transform.h>
+
+&left_encoder {
+    /* You can optionally ensure the status is "okay" here,
+     * though the base ZMK sofle_left.overlay already does this.
+     * status = "okay";
+     */
+    triggers-per-rotation = <30>;
 };
