@@ -1,0 +1,6 @@
+/* Minimal test for sofle_left.overlay */
+&kscan0 {
+    /* kscan0 is a node defined in ZMK's sofle.dtsi */
+    /* We are adding a dummy property to see if this overlay is processed */
+    this_is_a_test_property = <1>;
+};
