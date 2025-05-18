@@ -1,6 +1,4 @@
-/* sofle_right.overlay */
-&sensors { // Or the actual sensor controller node name for your board
-    right_config { // Or the actual node name for the RIGHT encoder
-        triggers-per-rotation = <30>;
-    };
+&right_encoder {
+    /* status = "okay"; */
+    triggers-per-rotation = <30>;
 };
