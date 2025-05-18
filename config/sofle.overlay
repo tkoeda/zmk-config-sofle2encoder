@@ -1,22 +1,19 @@
 / {
-    sensors {
-        left_config: left_config {
-            compatible = "zmk,rotary-encoder";
-            triggers-per-rotation = <30>;
-        };
-
-        right_config: right_config {
-            compatible = "zmk,rotary-encoder";
-            triggers-per-rotation = <30>;
-        };
+    /* Override just the triggers-per-rotation on the existing sensors node */
+    sensors: sensors {
+        triggers-per-rotation = <30>;
     };
 };
 
-/* Bind your new sensor configs to the real encoder nodes */
+/* Also enable each encoder and (optionally) override its own steps */
 &left_encoder {
-    sensor = <&left_config>;
+    status = "okay";
+    /* If you prefer per-encoder steps instead of global triggers-per-rotation:
+       steps = <30>;  
+    */
 };
 
 &right_encoder {
-    sensor = <&right_config>;
+    status = "okay";
+    /* steps = <30>; */
 };
