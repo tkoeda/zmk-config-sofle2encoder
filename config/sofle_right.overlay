@@ -1,11 +1,18 @@
-/*
- * Copyright (c) 202X The ZMK Contributors // Optional: Update year/name
- * SPDX-License-Identifier: MIT
- */
+/* config/sofle_right.overlay */
+/ { // Ensures we are defining this at the root level of the DTS
 
-// #include <dt-bindings/zmk/matrix_transform.h>
+    right_encoder: right_encoder { // Defines a node with the label "right_encoder"
+        compatible = "alps,ec11";
+        label = "RIGHT_ENCODER"; /* This is the label for ZMK's sensor subsystem */
 
-&right_encoder {
-    /* status = "okay"; */
-    triggers-per-rotation = <30>;
+        /* IMPORTANT: You MUST verify these GPIO pin assignments for your specific Sofle PCB version! */
+        /* The pins below (Pro Micro D2 and D3) are common for some Sofle versions but can vary. */
+        /* Consult your PCB's documentation or schematic. */
+        a-gpios = <&pro_micro 2 (GPIO_PULL_UP | GPIO_ACTIVE_HIGH)>; /* Example: Pro Micro D2 pin on the right half */
+        b-gpios = <&pro_micro 3 (GPIO_PULL_UP | GPIO_ACTIVE_HIGH)>; /* Example: Pro Micro D3 pin on the right half */
+
+        // resolution = <2>; /* Optional: ZMK defaults to 2 (pulses per detent). */
+        status = "okay";
+        triggers-per-rotation = <30>;
+    };
 };
