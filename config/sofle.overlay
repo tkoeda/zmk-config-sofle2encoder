@@ -10,9 +10,7 @@
             triggers-per-rotation = <30>;
         };
     };
-};
 
-/ {
     &encoder_left {
         sensor = <&left_config>;
     };
