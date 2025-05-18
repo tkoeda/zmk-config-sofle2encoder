@@ -3,3 +3,6 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      # if you have a build.yaml matrix, override this, otherwise defaults are fine
+      config_path: config
