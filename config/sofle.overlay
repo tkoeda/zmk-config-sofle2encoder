@@ -1,17 +1,6 @@
 / {
-    /* Override just the triggers-per-rotation on the existing sensors node */
+    /* Find the existing sensors node by its label and override just this property: */
     sensors: sensors {
         triggers-per-rotation = <30>;
     };
-};
-
-/* Also enable each encoder and (optionally) override its own steps */
-&encoder_left {
-    status = "okay";
-       steps = <30>;  
-};
-
-&encoder_right {
-    status = "okay";
-    steps = <30>;
 };
