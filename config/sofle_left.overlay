@@ -4,12 +4,3 @@
         triggers-per-rotation = <60>;
     };
 };
-
-/* Reference the encoder node as it's defined in the ZMK Sofle shield */
-&encoder_1 {
-    status = "okay";
-};
-
-&encoder_2 {
-    status = "disabled";
-};
