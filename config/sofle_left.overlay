@@ -2,4 +2,10 @@
     chosen {
         zmk,kscan = &kscan0;
     };
+    
+    /* Increase encoder resolution through device tree */
+    left_encoder: encoder_left {
+        resolution = <4>;
+        steps = <80>;  /* Increased from default 20 steps to 80 */
+    };
 };
