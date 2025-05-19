@@ -1,6 +1,3 @@
 / {
-    /* after all shield/layout overlays, force our desired trigger count */
-    sensors: sensors {
-        triggers-per-rotation = <30>;
-    };
+
 };

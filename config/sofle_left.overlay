@@ -2,19 +2,22 @@
     chosen {
         zmk,kscan = &kscan0;
     };
+};
 
-    sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-        triggers-per-rotation = <30>;
-    };
+&sensors {
+    triggers-per-rotation = <60>;  /* Set to desired value */
+    sensors = <&left_encoder>;     /* Only use left encoder on left half */
+};
 
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        label = "LEFT_ENCODER";
-        a-gpios = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <4>;
-        status = "okay";
-    };
+&left_encoder {
+    status = "okay";
+  
+    a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    
+    resolution = <4>;
+};
+
+&right_encoder {
+    status = "disabled";  /* Make sure right encoder is disabled on left half */
 };
