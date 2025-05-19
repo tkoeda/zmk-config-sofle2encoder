@@ -1,6 +1,11 @@
 / {
-    /* Override triggers-per-rotation for all encoders */
-    sensors {
-        triggers-per-rotation = <60>;
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+    
+    /* Define a new sensors node with our desired settings */
+    zmk_encoder_settings: zmk_encoder_settings {
+        compatible = "zmk,keymap-sensors";
+        triggers-per-rotation = <60>;  /* Set to desired value (60) */
     };
 };
