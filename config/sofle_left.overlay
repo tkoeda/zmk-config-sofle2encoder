@@ -1,25 +1,15 @@
 / {
-    chosen {
-        zmk,kscan = &kscan0;
-    };
-    
+    /* Override triggers-per-rotation for all encoders */
     sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
         triggers-per-rotation = <60>;
     };
 };
 
-&left_encoder {
+/* Reference the encoder node as it's defined in the ZMK Sofle shield */
+&encoder_1 {
     status = "okay";
-    
-   
-    a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    
-    resolution = <4>;
 };
 
-&right_encoder {
-    status = "disabled";  /* Make sure right encoder is disabled on left half */
+&encoder_2 {
+    status = "disabled";
 };
