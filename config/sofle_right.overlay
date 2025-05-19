@@ -2,10 +2,19 @@
     chosen {
         zmk,kscan = &kscan0;
     };
-    
-    /* Increase encoder resolution through device tree */
-    right_encoder: encoder_right {
-        resolution = <4>;
-        steps = <80>;  /* Increased from default 20 steps to 80 */
-    };
+};
+
+/* Override the sensors node to change triggers-per-rotation */
+&sensors {
+    triggers-per-rotation = <60>; /* Change from default 20 to 60 */
+};
+
+/* Ensure left encoder is disabled on right half */
+&left_encoder {
+    status = "disabled";
+};
+
+/* Ensure right encoder is enabled on right half */
+&right_encoder {
+    status = "okay";
 };
