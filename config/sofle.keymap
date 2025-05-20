@@ -76,16 +76,16 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&gresc          &kp N1  &kp N2    &kp N3            &kp N4        &kp N5                                  &kp N6  &kp N7             &kp N8             &kp N9    &kp N0         &kp DELETE
-&kp TAB         &kp Q   &kp W     &kp F             &kp P         &kp B                                   &kp J   &kp L              &kp U              &kp Y     &kp SEMICOLON  &kp BSPC
-&kp LEFT_SHIFT  &kp A   &kp R     &kp S             &kp T         &kp G                                   &kp M   &kp N              &kp E              &kp I     &kp O          &kp SQT
-&kp LEFT_ALT    &kp Z   &kp X     &kp C             &kp D         &kp V   &kp LG(NUMBER_0)    &kp C_MUTE  &kp K   &kp H              &kp COMMA          &kp DOT   &kp FSLH       &kp RSHFT
-                        &kp LGUI  &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 2   &kp SPACE           &kp ENTER   &mo 1   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RGUI
+&gresc          &kp N1  &kp N2    &kp N3            &kp N4        &kp N5                                      &kp N6  &kp N7             &kp N8             &kp N9    &kp N0         &kp DELETE
+&kp TAB         &kp Q   &kp W     &kp F             &kp P         &kp B                                       &kp J   &kp L              &kp U              &kp Y     &kp SEMICOLON  &kp BSPC
+&kp LEFT_SHIFT  &kp A   &kp R     &kp S             &kp T         &kp G                                       &kp M   &kp N              &kp E              &kp I     &kp O          &kp SQT
+&kp LEFT_ALT    &kp Z   &kp X     &kp C             &kp D         &kp V   &kp LG(C_MUTE)    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA          &kp DOT   &kp FSLH       &kp RSHFT
+                        &kp LGUI  &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 2   &kp SPACE         &kp ENTER         &mo 1   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RGUI
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LG(PLUS) LG(MINUS)>,
-                <&inc_dec_kp LG(C_VOLUME_UP) LG(C_VOLUME_DOWN)>;
+                <&inc_dec_kp LG(LA(RIGHT)) LG(LA(LEFT))>,
+                <&inc_dec_kp LG(PLUS) LG(MINUS)>;
         };
 
         lower_layer {
