@@ -60,7 +60,6 @@
             bindings = <&kp LS(LA(LEFT_BRACKET))>;
             key-positions = <26 27>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
             layers = <2>;
         };
 
@@ -68,7 +67,6 @@
             bindings = <&kp LS(LA(RIGHT_BRACKET))>;
             key-positions = <27 28>;
             timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
             layers = <2>;
         };
     };
