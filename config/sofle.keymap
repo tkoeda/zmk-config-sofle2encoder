@@ -34,34 +34,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <32 31>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <27 33>;
-        };
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <25 41>;
-        };
-
-        unindent {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <27 26>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <28 27>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         caps: caps {
