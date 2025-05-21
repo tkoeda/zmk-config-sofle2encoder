@@ -51,6 +51,16 @@
             bindings = <&kp ESCAPE>;
             key-positions = <25 41>;
         };
+
+        unindent {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <27 26>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <28 27>;
+        };
     };
 
     behaviors {
