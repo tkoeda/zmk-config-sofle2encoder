@@ -121,7 +121,7 @@
 &kp F1  &kp F2     &kp F3         &kp F4            &kp F5             &kp F6                           &kp F7         &kp F8         &kp F9                &kp F10                &kp F11       &kp F12
 &trans  &kp GRAVE  &kp LESS_THAN  &kp GREATER_THAN  &kp DOUBLE_QUOTES  &kp SQT                          &kp AMPERSAND  &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PERCENT   &trans
 &trans  &kp EXCL   &kp MINUS      &kp PLUS          &kp EQUAL          &kp HASH                         &kp PIPE       &kp COLON      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION  &trans
-&trans  &kp LCTRL  &kp SLASH      &kp ASTERISK      &kp UNDERSCORE     &kp BACKSLASH  &trans    &trans  &kp TILDE      &kp DOLLAR     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
+&trans  &kp CARET  &kp SLASH      &kp ASTERISK      &kp UNDERSCORE     &kp BACKSLASH  &trans    &trans  &kp TILDE      &kp DOLLAR     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AT_SIGN   &trans
                    &trans         &trans            &trans             &trans         &trans    &trans  &trans         &trans         &trans                &trans
             >;
 
