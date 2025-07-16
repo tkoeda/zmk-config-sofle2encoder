@@ -75,15 +75,15 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&gresc          &kp N1  &kp N2    &kp N3            &kp N4        &kp N5                                      &kp N6  &kp N7             &kp N8             &kp N9    &kp N0         &kp DELETE
-&kp TAB         &kp Q   &kp W     &kp F             &kp P         &kp B                                       &kp J   &kp L              &kp U              &kp Y     &kp SEMICOLON  &kp BSPC
-&kp LEFT_SHIFT  &kp A   &kp R     &kp S             &kp T         &kp G                                       &kp M   &kp N              &kp E              &kp I     &kp O          &kp SQT
-&kp LEFT_ALT    &kp Z   &kp X     &kp C             &kp D         &kp V   &kp LG(C_MUTE)    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA          &kp DOT   &kp FSLH       &kp RSHFT
-                        &kp LGUI  &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 2   &kp SPACE         &kp ENTER         &mo 1   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RGUI
+&gresc          &kp N1  &kp N2    &kp N3            &kp N4        &kp N5                                                &kp N6  &kp N7             &kp N8             &kp N9    &kp N0         &kp DELETE
+&kp TAB         &kp Q   &kp W     &kp F             &kp P         &kp B                                                 &kp J   &kp L              &kp U              &kp Y     &kp SEMICOLON  &kp BSPC
+&kp LEFT_SHIFT  &kp A   &kp R     &kp S             &kp T         &kp G                                                 &kp M   &kp N              &kp E              &kp I     &kp O          &kp SQT
+&kp LEFT_ALT    &kp Z   &kp X     &kp C             &kp D         &kp V   &kp LS(LC(LG(UP_ARROW)))    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA          &kp DOT   &kp FSLH       &kp RSHFT
+                        &kp LGUI  &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 2   &kp SPACE                   &kp ENTER         &mo 1   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &kp RGUI
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LA(LC(RIGHT)) LA(LC(LEFT))>,
+                <&inc_dec_kp LC(LS(RIGHT)) LC(LS(LEFT))>,
                 <&inc_dec_kp LG(PLUS) LG(MINUS)>;
         };
 
@@ -122,11 +122,11 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans             &trans     &trans      &trans    &trans                      &trans  &trans         &trans        &trans         &trans                &trans
-&trans  &trans             &trans     &trans      &trans    &trans                      &trans  &kp LG(SPACE)  &trans        &trans         &trans                &trans
-&trans  &kp K_VOLUME_UP    &kp LEFT   &kp RIGHT   &kp UP    &kp CLCK                    &trans  &kp LG(UP)     &kp LG(LEFT)  &kp LG(RIGHT)  &kp C_BRIGHTNESS_INC  &trans
-&trans  &kp K_VOLUME_DOWN  &kp K_CUT  &kp K_COPY  &kp DOWN  &trans    &trans    &trans  &trans  &kp LG(DOWN)   &trans        &trans         &kp C_BRIGHTNESS_DEC  &trans
-                           &trans     &trans      &trans    &trans    &trans    &trans  &trans  &trans         &trans        &trans
+&trans  &trans             &trans     &trans      &trans    &trans                          &trans  &trans         &trans        &trans         &trans                &trans
+&trans  &trans             &trans     &trans      &trans    &trans                          &trans  &kp LG(SPACE)  &trans        &trans         &trans                &trans
+&trans  &kp K_VOLUME_UP    &kp LEFT   &kp RIGHT   &kp UP    &kp CLCK                        &trans  &kp LG(UP)     &kp LG(LEFT)  &kp LG(RIGHT)  &kp C_BRIGHTNESS_INC  &trans
+&trans  &kp K_VOLUME_DOWN  &kp K_CUT  &kp K_COPY  &kp DOWN  &trans    &kp K_MUTE    &trans  &trans  &kp LG(DOWN)   &trans        &trans         &kp C_BRIGHTNESS_DEC  &trans
+                           &trans     &trans      &trans    &trans    &trans        &trans  &trans  &trans         &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
