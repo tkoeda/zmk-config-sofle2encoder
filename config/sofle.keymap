@@ -91,7 +91,7 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&gresc          &kp N1  &kp N2    &kp N3            &kp N4        &kp N5                                                &kp N6  &kp N7             &kp N8             &kp N9    &kp N0         &kp DELETE
+&kp ESC         &kp N1  &kp N2    &kp N3            &kp N4        &kp N5                                                &kp N6  &kp N7             &kp N8             &kp N9    &kp N0         &kp DELETE
 &kp TAB         &kp Q   &kp W     &kp F             &kp P         &kp B                                                 &kp J   &kp L              &kp U              &kp Y     &kp SEMICOLON  &kp BSPC
 &kp LEFT_SHIFT  &kp A   &kp R     &kp S             &kp T         &kp G                                                 &kp M   &kp N              &kp E              &kp I     &kp O          &kp SQT
 &kp LEFT_ALT    &kp Z   &kp X     &kp C             &kp D         &kp V   &kp LS(LC(LG(UP_ARROW)))    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA          &kp DOT   &kp FSLH       &kp RSHFT
