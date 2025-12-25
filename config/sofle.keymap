@@ -39,23 +39,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        fold {
-            bindings = <&kp LA(LG(LEFT_BRACKET))>;
-            key-positions = <26 27>;
-            timeout-ms = <30>;
-            layers = <0>;
-        };
-
-        unfold {
-            bindings = <&kp LA(LG(RIGHT_BRACKET))>;
-            key-positions = <27 28>;
-            timeout-ms = <30>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         caps: caps {
@@ -63,22 +47,6 @@
             label = "CAPS";
             #binding-cells = <0>;
             continue-list = <POUND MINUS BACKSPACE UNDERSCORE>;
-        };
-    };
-
-    macros {
-        new_tab: new_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(T)>;
-            label = "NEW_TAB";
-        };
-
-        close_tab: close_tab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(W)>;
-            label = "CLOSE_TAB";
         };
     };
 
