@@ -187,7 +187,7 @@
 &kp TAB         &kp Q   &kp W   &kp F             &kp P             &kp B                                   &kp J   &kp L              &kp U          &kp Y    &kp SEMICOLON  &kp BSPC
 &kp LEFT_SHIFT  &kp A   &kp R   &kp S             &kp T             &kp G                                   &kp M   &kp N              &kp E          &kp I    &kp O          &kp SQT
 &kp LEFT_ALT    &kp Z   &kp X   &kp C             &kp D             &kp V   &kp K_MUTE    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA      &kp DOT  &kp FSLH       &kp RSHFT
-                        &to 0   &kp LEFT_COMMAND  &kp LEFT_CONTROL  &mo 2   &kp SPACE     &lt 4 ENTER       &mo 1   &kp RIGHT_CONTROL  &kp RIGHT_GUI  &to 0
+                        &to 0   &kp LEFT_COMMAND  &kp LEFT_CONTROL  &mo 6   &kp SPACE     &lt 4 ENTER       &mo 1   &kp RIGHT_CONTROL  &kp RIGHT_GUI  &to 0
             >;
 
             sensor-bindings =
