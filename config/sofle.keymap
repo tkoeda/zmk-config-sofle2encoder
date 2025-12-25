@@ -28,9 +28,14 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        adjust_layer {
+        SYSTEM_MAC {
             if-layers = <2 3>;
             then-layer = <5>;
+        };
+
+        SYSTEM_WIN {
+            if-layers = <2 4>;
+            then-layer = <3>;
         };
     };
 
@@ -80,8 +85,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "Base";
+        BASE_MAC {
+            display-name = "BASE_MAC";
 
             // ------------------------------------------------------------------------------------------------------------
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |       |
@@ -103,8 +108,8 @@
                 <&inc_dec_kp LG(MINUS) LG(PLUS)>;
         };
 
-        windows_layer {
-            display-name = "Base";
+        BASE_WIN {
+            display-name = "BASE_WIN";
             bindings = <
 &kp ESC         &kp N1  &kp N2  &kp N3            &kp N4            &kp N5                                  &kp N6  &kp N7             &kp N8         &kp N9   &kp N0         &kp DELETE
 &kp TAB         &kp Q   &kp W   &kp F             &kp P             &kp B                                   &kp J   &kp L              &kp U          &kp Y    &kp SEMICOLON  &kp BSPC
@@ -118,8 +123,8 @@
                 <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
         };
 
-        lower_layer {
-            display-name = "Symbols";
+        SYMBOL {
+            display-name = "SYMBOL";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
@@ -142,8 +147,8 @@
                 <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
-        raise_layer {
-            display-name = "Nav";
+        NAV_MAC {
+            display-name = "NAV_MAC";
 
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
@@ -165,13 +170,13 @@
                 <&inc_dec_kp PG_UP PG_DN>;
         };
 
-        raise_layer_windows {
-            display-name = "Nav";
+        NAV_WIN {
+            display-name = "NAV_WIN";
             bindings = <
 &trans  &trans             &trans      &trans      &trans    &trans                        &trans  &trans         &trans        &trans         &trans                &trans
-&trans  &trans             &close_tab  &new_tab    &trans    &trans                        &trans  &kp LG(SPACE)  &trans        &trans         &trans                &trans
-&trans  &kp C_VOLUME_UP    &kp LEFT    &kp RIGHT   &kp UP    &kp CLCK                      &trans  &kp LG(UP)     &kp LG(LEFT)  &kp LG(RIGHT)  &kp C_BRIGHTNESS_INC  &trans
-&trans  &kp C_VOLUME_DOWN  &kp K_CUT   &kp K_COPY  &kp DOWN  &kp K_MUTE  &trans    &trans  &trans  &kp LG(DOWN)   &trans        &trans         &kp C_BRIGHTNESS_DEC  &trans
+&trans  &trans             &close_tab  &new_tab    &trans    &trans                        &trans  &kp LC(SPACE)  &trans        &trans         &trans                &trans
+&trans  &kp C_VOLUME_UP    &kp LEFT    &kp RIGHT   &kp UP    &kp CLCK                      &trans  &kp LC(UP)     &kp LC(LEFT)  &kp LC(RIGHT)  &kp C_BRIGHTNESS_INC  &trans
+&trans  &kp C_VOLUME_DOWN  &kp K_CUT   &kp K_COPY  &kp DOWN  &kp K_MUTE  &trans    &trans  &trans  &kp LC(DOWN)   &trans        &trans         &kp C_BRIGHTNESS_DEC  &trans
                            &trans      &trans      &trans    &trans      &trans    &trans  &trans  &trans         &trans        &trans
             >;
 
@@ -180,7 +185,7 @@
                 <&inc_dec_kp PG_UP PG_DN>;
         };
 
-        adjust_layer {
+        SYSTEM {
             // ----------------------------------------------------------------------------------------------------------------------------
             // | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
             // | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
@@ -188,7 +193,7 @@
             // |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
             //                    |         |         |         |         |         | |      |      |      |       |      |
 
-            display-name = "System";
+            display-name = "SYSTEM";
             bindings = <
 &bt BT_CLR_ALL     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none  &none  &none  &none  &none  &none
 &ext_power EP_TOG  &none         &none         &none         &none         &studio_unlock                  &none  &none  &none  &none  &none  &none
@@ -200,7 +205,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-        num_layer {
+        NUM {
             bindings = <
 &trans  &trans  &trans  &trans     &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
