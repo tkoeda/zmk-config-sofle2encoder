@@ -141,11 +141,11 @@
         NAV_WIN {
             display-name = "NAV_WIN";
             bindings = <
-&trans  &trans             &trans     &trans      &trans    &trans                        &trans  &trans         &trans        &trans         &trans                &trans
-&trans  &trans             &trans     &trans      &trans    &trans                        &trans  &kp LC(SPACE)  &trans        &trans         &trans                &trans
-&trans  &kp C_VOLUME_UP    &kp LEFT   &kp RIGHT   &kp UP    &kp CLCK                      &trans  &kp LC(UP)     &kp LC(LEFT)  &kp LC(RIGHT)  &kp C_BRIGHTNESS_INC  &trans
-&trans  &kp C_VOLUME_DOWN  &kp K_CUT  &kp K_COPY  &kp DOWN  &kp K_MUTE  &trans    &trans  &trans  &kp LC(DOWN)   &trans        &trans         &kp C_BRIGHTNESS_DEC  &trans
-                           &trans     &trans      &trans    &trans      &trans    &trans  &trans  &trans         &trans        &trans
+&trans  &trans             &trans     &trans      &trans    &trans                                  &trans  &trans         &trans        &trans         &trans                &trans
+&trans  &kp LA(F4)         &trans     &trans      &trans    &trans                                  &trans  &kp LC(SPACE)  &trans        &trans         &trans                &trans
+&trans  &kp C_VOLUME_UP    &kp LEFT   &kp RIGHT   &kp UP    &kp CLCK                                &trans  &kp LC(UP)     &kp LC(LEFT)  &kp LC(RIGHT)  &kp C_BRIGHTNESS_INC  &trans
+&trans  &kp C_VOLUME_DOWN  &kp K_CUT  &kp K_COPY  &kp DOWN  &kp K_MUTE  &kp LG(UP_ARROW)    &trans  &trans  &kp LC(DOWN)   &trans        &trans         &kp C_BRIGHTNESS_DEC  &trans
+                           &trans     &trans      &trans    &trans      &trans              &trans  &trans  &trans         &trans        &trans
             >;
 
             sensor-bindings =
