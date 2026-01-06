@@ -29,7 +29,7 @@
         compatible = "zmk,conditional-layers";
 
         SYSTEM_MAC {
-            if-layers = <4 0>;
+            if-layers = <4 3>;
             then-layer = <5>;
         };
 
@@ -98,7 +98,7 @@
 &kp TAB         &kp Q   &kp W   &kp F             &kp P         &kp B                                                 &kp J   &kp L              &kp U              &kp Y    &kp SEMICOLON  &kp BSPC
 &kp LEFT_SHIFT  &kp A   &kp R   &kp S             &kp T         &kp G                                                 &kp M   &kp N              &kp E              &kp I    &kp O          &kp SQT
 &kp LEFT_ALT    &kp Z   &kp X   &kp C             &kp D         &kp V   &kp LS(LC(LG(UP_ARROW)))    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA          &kp DOT  &kp FSLH       &kp RSHFT
-                        &to 1   &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 0   &kp SPACE                   &lt 6 ENTER       &mo 4   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &to 1
+                        &to 1   &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 3   &kp SPACE                   &lt 6 ENTER       &mo 4   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &to 1
             >;
 
             sensor-bindings =
