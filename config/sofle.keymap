@@ -29,12 +29,12 @@
         compatible = "zmk,conditional-layers";
 
         SYSTEM_MAC {
-            if-layers = <4 1>;
+            if-layers = <4 0>;
             then-layer = <5>;
         };
 
         SYSTEM_WIN {
-            if-layers = <4 3>;
+            if-layers = <4 1>;
             then-layer = <5>;
         };
     };
@@ -53,6 +53,36 @@
     keymap {
         compatible = "zmk,keymap";
 
+        BASE_WIN {
+            display-name = "BASE_WIN";
+            bindings = <
+&kp ESC         &kp N1  &kp N2  &kp N3            &kp N4            &kp N5                                  &kp N6  &kp N7             &kp N8         &kp N9   &kp N0         &kp DELETE
+&kp TAB         &kp Q   &kp W   &kp F             &kp P             &kp B                                   &kp J   &kp L              &kp U          &kp Y    &kp SEMICOLON  &kp BSPC
+&kp LEFT_SHIFT  &kp A   &kp R   &kp S             &kp T             &kp G                                   &kp M   &kp N              &kp E          &kp I    &kp O          &kp SQT
+&kp LEFT_ALT    &kp Z   &kp X   &kp C             &kp D             &kp V   &kp K_MUTE    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA      &kp DOT  &kp FSLH       &kp RSHFT
+                        &to 2   &kp LEFT_COMMAND  &kp LEFT_CONTROL  &mo 1   &kp SPACE     &lt 6 ENTER       &mo 4   &kp RIGHT_CONTROL  &kp RIGHT_GUI  &to 2
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
+                <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
+        };
+
+        NAV_WIN {
+            display-name = "NAV_WIN";
+            bindings = <
+&kp LA(F4)  &trans             &trans     &trans      &trans    &trans                                  &trans  &trans        &trans        &trans         &trans                &trans
+&kp F1      &kp F2             &kp F3     &kp F4      &kp F5    &kp F6                                  &kp F7  &kp F8        &kp F9        &kp F10        &kp F11               &kp F12
+&trans      &kp C_VOLUME_UP    &kp LEFT   &kp RIGHT   &kp UP    &kp CLCK                                &trans  &kp LC(UP)    &kp LC(LEFT)  &kp LC(RIGHT)  &kp C_BRIGHTNESS_INC  &trans
+&trans      &kp C_VOLUME_DOWN  &kp K_CUT  &kp K_COPY  &kp DOWN  &kp K_MUTE  &kp LG(UP_ARROW)    &trans  &trans  &kp LC(DOWN)  &trans        &trans         &kp C_BRIGHTNESS_DEC  &trans
+                               &trans     &trans      &trans    &trans      &trans              &trans  &trans  &trans        &trans        &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp LG(RIGHT) LG(LEFT)>,
+                <&inc_dec_kp PG_UP PG_DN>;
+        };
+
         BASE_MAC {
             display-name = "BASE_MAC";
 
@@ -68,7 +98,7 @@
 &kp TAB         &kp Q   &kp W   &kp F             &kp P         &kp B                                                 &kp J   &kp L              &kp U              &kp Y    &kp SEMICOLON  &kp BSPC
 &kp LEFT_SHIFT  &kp A   &kp R   &kp S             &kp T         &kp G                                                 &kp M   &kp N              &kp E              &kp I    &kp O          &kp SQT
 &kp LEFT_ALT    &kp Z   &kp X   &kp C             &kp D         &kp V   &kp LS(LC(LG(UP_ARROW)))    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA          &kp DOT  &kp FSLH       &kp RSHFT
-                        &to 2   &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 1   &kp SPACE                   &lt 6 ENTER       &mo 4   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &to 2
+                        &to 1   &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 0   &kp SPACE                   &lt 6 ENTER       &mo 4   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &to 1
             >;
 
             sensor-bindings =
@@ -96,36 +126,6 @@
 
             sensor-bindings =
                 <&inc_dec_kp LA(LG(RIGHT)) LA(LG(LEFT))>,
-                <&inc_dec_kp PG_UP PG_DN>;
-        };
-
-        BASE_WIN {
-            display-name = "BASE_WIN";
-            bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3            &kp N4            &kp N5                                  &kp N6  &kp N7             &kp N8         &kp N9   &kp N0         &kp DELETE
-&kp TAB         &kp Q   &kp W   &kp F             &kp P             &kp B                                   &kp J   &kp L              &kp U          &kp Y    &kp SEMICOLON  &kp BSPC
-&kp LEFT_SHIFT  &kp A   &kp R   &kp S             &kp T             &kp G                                   &kp M   &kp N              &kp E          &kp I    &kp O          &kp SQT
-&kp LEFT_ALT    &kp Z   &kp X   &kp C             &kp D             &kp V   &kp K_MUTE    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA      &kp DOT  &kp FSLH       &kp RSHFT
-                        &to 0   &kp LEFT_COMMAND  &kp LEFT_CONTROL  &mo 3   &kp SPACE     &lt 6 ENTER       &mo 4   &kp RIGHT_CONTROL  &kp RIGHT_GUI  &to 0
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp C_VOLUME_UP C_VOL_DN>,
-                <&inc_dec_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
-        };
-
-        NAV_WIN {
-            display-name = "NAV_WIN";
-            bindings = <
-&kp LA(F4)  &trans             &trans     &trans      &trans    &trans                                  &trans  &trans        &trans        &trans         &trans                &trans
-&kp F1      &kp F2             &kp F3     &kp F4      &kp F5    &kp F6                                  &kp F7  &kp F8        &kp F9        &kp F10        &kp F11               &kp F12
-&trans      &kp C_VOLUME_UP    &kp LEFT   &kp RIGHT   &kp UP    &kp CLCK                                &trans  &kp LC(UP)    &kp LC(LEFT)  &kp LC(RIGHT)  &kp C_BRIGHTNESS_INC  &trans
-&trans      &kp C_VOLUME_DOWN  &kp K_CUT  &kp K_COPY  &kp DOWN  &kp K_MUTE  &kp LG(UP_ARROW)    &trans  &trans  &kp LC(DOWN)  &trans        &trans         &kp C_BRIGHTNESS_DEC  &trans
-                               &trans     &trans      &trans    &trans      &trans              &trans  &trans  &trans        &trans        &trans
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp LG(RIGHT) LG(LEFT)>,
                 <&inc_dec_kp PG_UP PG_DN>;
         };
 
