@@ -35,7 +35,7 @@
 
         SYSTEM_WIN {
             if-layers = <4 3>;
-            then-layer = <1>;
+            then-layer = <5>;
         };
     };
 
