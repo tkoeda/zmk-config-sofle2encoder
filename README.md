@@ -1,3 +1,5 @@
+## Currently not working after ZMK update.  Please use this repo https://github.com/KeyboardHoarders/zmk-config-soflemx
+
 # Sofle Choc 2 encoders. 
 
 Flash firmware:
