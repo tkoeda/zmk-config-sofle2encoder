@@ -65,7 +65,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp LG(RIGHT) LG(LEFT)>,
-                <&inc_dec_kp LC(PLUS) LC(MINUS)>;
+                <&inc_dec_kp LC(KP_MINUS) LC(KP_PLUS)>;
         };
 
         NAV_WIN {
