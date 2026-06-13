@@ -49,19 +49,6 @@
             continue-list = <POUND MINUS BACKSPACE UNDERSCORE>;
         };
 
-        to_mac: to_mac {
-            compatible = "zmk,behavior-macro";
-            label = "TO_MAC";
-            #binding-cells = <0>;
-            bindings = <&to 2>, <&default_layer_set 2>;
-        };
-
-        to_win: to_win {
-            compatible = "zmk,behavior-macro";
-            label = "TO_WIN";
-            #binding-cells = <0>;
-            bindings = <&to 0>, <&default_layer_set 0>;
-        };
     };
 
     keymap {
@@ -74,7 +61,7 @@
 &kp TAB         &kp Q   &kp W   &kp F             &kp P             &kp B                                   &kp J   &kp L              &kp U          &kp Y    &kp SEMICOLON  &kp BSPC
 &kp LEFT_SHIFT  &kp A   &kp R   &kp S             &kp T             &kp G                                   &kp M   &kp N              &kp E          &kp I    &kp O          &kp SQT
 &kp LEFT_ALT    &kp Z   &kp X   &kp C             &kp D             &kp V   &kp LG(UP)    &kp LC(NUMBER_0)  &kp K   &kp H              &kp COMMA      &kp DOT  &kp FSLH       &kp RSHFT
-                        &to_mac   &kp LEFT_COMMAND  &kp LEFT_CONTROL  &mo 1   &kp SPACE     &lt 6 ENTER       &mo 4   &kp RIGHT_CONTROL  &kp RIGHT_GUI  &to_mac
+                        &to 2   &kp LEFT_COMMAND  &kp LEFT_CONTROL  &mo 1   &kp SPACE     &lt 6 ENTER       &mo 4   &kp RIGHT_CONTROL  &kp RIGHT_GUI  &to 2
             >;
 
             sensor-bindings =
@@ -112,7 +99,7 @@
 &kp TAB         &kp Q   &kp W   &kp F             &kp P         &kp B                                                 &kp J   &kp L              &kp U              &kp Y    &kp SEMICOLON  &kp BSPC
 &kp LEFT_SHIFT  &kp A   &kp R   &kp S             &kp T         &kp G                                                 &kp M   &kp N              &kp E              &kp I    &kp O          &kp SQT
 &kp LEFT_ALT    &kp Z   &kp X   &kp C             &kp D         &kp V   &kp LS(LC(LG(UP_ARROW)))    &kp LG(NUMBER_0)  &kp K   &kp H              &kp COMMA          &kp DOT  &kp FSLH       &kp RSHFT
-                        &to_win   &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 3   &kp SPACE                   &lt 6 ENTER       &mo 4   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &to_win
+                        &to 0   &kp LEFT_CONTROL  &kp LEFT_GUI  &mo 3   &kp SPACE                   &lt 6 ENTER       &mo 4   &kp RIGHT_COMMAND  &kp RIGHT_CONTROL  &to 0
             >;
 
             sensor-bindings =
