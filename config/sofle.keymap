@@ -48,7 +48,6 @@
             #binding-cells = <0>;
             continue-list = <POUND MINUS BACKSPACE UNDERSCORE>;
         };
-
     };
 
     keymap {
@@ -165,7 +164,7 @@
             display-name = "SYSTEM";
             bindings = <
 &bt BT_CLR_ALL     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none  &none  &none  &none  &none  &none
-&ext_power EP_TOG  &none         &none         &none         &none         &studio_unlock                  &none  &none  &none  &none  &none  &none
+&ext_power EP_TOG  &to 7         &none         &none         &none         &studio_unlock                  &none  &none  &none  &none  &none  &none
 &none              &none         &none         &none         &none         &none                           &none  &none  &none  &none  &none  &none
 &none              &none         &none         &none         &none         &caps_word      &none    &none  &none  &none  &none  &none  &none  &none
                                  &none         &none         &none         &none           &none    &none  &none  &none  &none  &none
@@ -181,6 +180,16 @@
 &trans  &kp N1  &kp N2  &kp N3     &kp N4   &kp N5                    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp RET
 &trans  &trans  &trans  &kp COMMA  &kp DOT  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans     &trans   &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        qwerty {
+            bindings = <
+&trans          &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans     &trans   &trans  &trans
+&trans          &kp Q   &kp W   &kp E   &kp R   &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P   &trans
+&kp LEFT_ALT    &kp A   &kp S   &kp D   &kp F   &kp G                     &kp H   &kp J   &kp K      &kp L    &trans  &trans
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans  &kp N   &kp M   &kp COMMA  &kp DOT  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
         };
     };
